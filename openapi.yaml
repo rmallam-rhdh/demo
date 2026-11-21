@@ -1,0 +1,22 @@
+openapi: 3.0.3
+info:
+  title: demo API (APP-1042)
+  description: Enterprise Golden Path Service OpenAPI 3.0 Specification
+  version: 1.0.0
+  x-app-id: APP-1042
+  x-owner-group: group:default/developers
+paths:
+  /healthz:
+    get:
+      summary: Service liveness and readiness probe
+      operationId: getHealth
+      responses:
+        "200":
+          description: Service is healthy
+  /api:
+    get:
+      summary: Service metadata and APPID status payload
+      operationId: getApiPayload
+      responses:
+        "200":
+          description: Service metadata response
